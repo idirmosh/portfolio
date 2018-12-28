@@ -1,0 +1,53 @@
+@import "../scss/partials/variables";
+@import "../scss/partials/mixins";
+
+nav {
+    @include clearFix;
+    padding: 44px 0;
+    .nav__title{
+        @include grid (2, 2%);
+        h1{
+            font-size: 14px;
+            font-weight: 700;
+            color: #222;
+            span{
+                font-size: 12px;
+                font-weight: 300;
+                color: #b3b3b3;
+                margin-left: 12px;
+            }
+        }
+    }
+    .nav__items{
+        float: right;
+       .nav__items--list{
+            display: flex;
+            list-style-type: none;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 25px;
+            li{
+                a{
+                    @include list-reset;
+                    margin-right: 18px;
+                    color: #b3b3b3;
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 0;
+                        height: 2px;
+                        background: #222;
+                        transition: width .3s;
+                    }
+                    &:hover::after{
+                        width: 30px;
+                    }
+                    &:hover{
+                        color: #222;
+                        
+                    }
+                }
+            }
+        }
+    }
+}

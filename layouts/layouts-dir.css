@@ -1,0 +1,184 @@
+nav {
+  padding: 44px 0;
+}
+
+nav:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+nav .nav__title {
+  float: left;
+  width: 49%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+
+nav .nav__title:nth-child(2n) {
+  margin-right: 0;
+}
+
+nav .nav__title h1 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #222;
+}
+
+nav .nav__title h1 span {
+  font-size: 12px;
+  font-weight: 300;
+  color: #b3b3b3;
+  margin-left: 12px;
+}
+
+nav .nav__items {
+  float: right;
+}
+
+nav .nav__items .nav__items--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+nav .nav__items .nav__items--list li a {
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 18px;
+  color: #b3b3b3;
+}
+
+nav .nav__items .nav__items--list li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #222;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+}
+
+nav .nav__items .nav__items--list li a:hover::after {
+  width: 30px;
+}
+
+nav .nav__items .nav__items--list li a:hover {
+  color: #222;
+}
+
+footer {
+  width: 100%;
+}
+
+footer .foo-col {
+  float: left;
+  width: 23.5%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+
+footer .foo-col:nth-child(4n) {
+  margin-right: 0;
+}
+
+footer .foo-col ul {
+  margin: 0;
+  padding: 0;
+}
+
+footer .foo-col ul li {
+  list-style: none;
+  line-height: 30px;
+}
+
+footer .foo-col ul li a {
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: #b3b3b3;
+}
+
+footer .foo-col ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #222;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+}
+
+footer .foo-col ul li a:hover::after {
+  width: 50px;
+}
+
+footer .foo-col ul li a:hover {
+  color: #222;
+}
+
+footer .foo-col h3 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+footer .foo-col a {
+  font-size: 13px;
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: #b3b3b3;
+}
+
+footer .foo-col a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #000;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+}
+
+footer .foo-col a:hover::after {
+  width: 50px;
+}
+
+footer .foo-col a:hover {
+  color: #222;
+}
+
+.copy {
+  text-align: center;
+}
+
+.copy p {
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+.copy p span {
+  font-weight: 500;
+  color: #9c0859;
+  font-size: 18px;
+}
+
+.copy p a {
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  font-weight: 500;
+}
+/*# sourceMappingURL=layouts-dir.css.map */

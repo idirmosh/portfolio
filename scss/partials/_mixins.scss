@@ -1,0 +1,112 @@
+@mixin breakpoint($size) {
+  @if $size == phone {
+    @media (max-width: 599px) { @content; }
+  } @else if $size == tablet-p {
+    @media (max-width: 600px) { @content; }
+  } @else if $size == tablet-l {
+    @media (max-width: 900px) { @content; }
+  } @else if $size == desktop {
+    @media (max-width: 1200px) { @content; }
+  } @else if $size == big-desktop {
+    @media (max-width: 1800px) { @content; }
+  }
+}
+
+@mixin list-reset {
+  text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin img-responsive {
+    height: auto;
+    max-width: 100%;
+}
+@mixin clearFix{
+  &:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin grid($cols, $mgn){
+  float: left;
+  width: ((100% - (($cols - 1) * $mgn)) / $cols );
+  margin-right: $mgn;
+  margin-bottom: $mgn;
+  &:nth-child(#{$cols}n){
+    margin-right: 0;
+  }
+}
+
+@mixin shadow($h, $v, $spread, $color) {
+    box-shadow: $h $v $spread $color;
+    -webkit-box-shadow: $h $v $spread $color;
+    -moz-box-shadow: $h $v $spread $color;
+}
+
+@mixin transform {
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+
+@mixin text-shadow{
+  text-shadow: 0 0 2px rgba(10,10,10,.6);
+}
+
+// Magic parallax mixins
+
+$parallax-perspective : 1 !default;
+$parallax-element     : "body" !default;
+$parallax-ios         : true !default;
+
+@mixin parallax-init(
+  $perspective  : $parallax-perspective,
+  $element      : $parallax-element,
+  $parallax-ios : $parallax-ios
+  ) {
+  @if $element == "body" {
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  }
+  #{$element} {
+    overflow: auto;
+    perspective: $perspective * 1px;
+    transform-style: preserve-3d;
+    // Allows for smooth scrolling but disables parallax effects.
+    @if $parallax-ios == false {
+      -webkit-overflow-scrolling: touch;
+    }
+    // Preserve 3D
+    &, * {
+      transform-style: preserve-3d;
+    }
+  }
+}
+
+@mixin parallax(
+  $distance    : 0,
+  $perspective : $parallax-perspective
+  ) {
+  transform:
+    translateZ($distance * $perspective * 1px)
+    scale(abs($distance - 1))
+  ;
+  z-index: $distance * 1000;
+}

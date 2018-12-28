@@ -1,0 +1,19 @@
+@import url('./fonts/fonts.css');
+@import "scss/partials/normalize";
+@import "scss/partials/variables";
+@import "scss/partials/mixins";
+@import "layouts/layouts-dir";
+
+.wrapper{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+body{
+    font-family: 'Aktiv Grotesk Corp';
+    background-color: #FAFAFA;
+    letter-spacing: 0.16 px;
+}
+
+
+

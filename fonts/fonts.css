@@ -1,0 +1,47 @@
+
+@font-face {
+	font-family: 'Aktiv Grotesk Corp';
+	src: url('AktivGroteskCorp-Bold.eot');
+	src: local('AktivGroteskCorp-Bold'),
+		url('AktivGroteskCorp-Bold.eot?#iefix') format('embedded-opentype'),
+		url('AktivGroteskCorp-Bold.woff') format('woff'),
+		url('AktivGroteskCorp-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Aktiv Grotesk Corp';
+	src: url('AktivGroteskCorp-Medium.eot');
+	src: local('AktivGroteskCorp-Medium'),
+		url('AktivGroteskCorp-Medium.eot?#iefix') format('embedded-opentype'),
+		url('AktivGroteskCorp-Medium.woff') format('woff'),
+		url('AktivGroteskCorp-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Aktiv Grotesk Corp';
+	src: url('AktivGroteskCorp-Regular.eot');
+	src: local('AktivGroteskCorp-Regular'),
+		url('AktivGroteskCorp-Regular.eot?#iefix') format('embedded-opentype'),
+		url('AktivGroteskCorp-Regular.woff') format('woff'),
+		url('AktivGroteskCorp-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+
+
+@font-face {
+	font-family: 'Aktiv Grotesk Corp';
+	src: url('AktivGroteskCorp-Light.eot');
+	src: local('AktivGroteskCorp-Light'),
+		url('AktivGroteskCorp-Light.eot?#iefix') format('embedded-opentype'),
+		url('AktivGroteskCorp-Light.woff') format('woff'),
+		url('AktivGroteskCorp-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
